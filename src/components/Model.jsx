@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import * as THREE from 'three'
 
 export default function Model({ modelName, position = [0, 0, 0] }) {
-  const { scene } = useGLTF(`/public/components/models/${modelName}.glb`)
+  const { scene } = useGLTF(`/public/models/${modelName}.glb`)
   const ref = useRef()
 
   const basePosition = useRef(new THREE.Vector3(...position))
