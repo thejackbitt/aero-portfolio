@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import * as THREE from 'three'
 
 export default function Model({ modelName, position = [0, 0, 0] }) {
-  const { scene } = useGLTF(`/src/components/models/${modelName}.glb`)
+  const { scene } = useGLTF(`/public/components/models/${modelName}.glb`)
   const ref = useRef()
 
   const basePosition = useRef(new THREE.Vector3(...position))
@@ -33,11 +33,11 @@ export default function Model({ modelName, position = [0, 0, 0] }) {
   )
 }
 
-useGLTF.preload('/src/components/models/WindowsXP.glb')
-useGLTF.preload('/src/components/models/Keyboard.glb')
-useGLTF.preload('/src/components/models/Tux.glb')
-useGLTF.preload('/src/components/models/Pen.glb')
-useGLTF.preload('/src/components/models/CD.glb')
-useGLTF.preload('/src/components/models/Headphones.glb')
-useGLTF.preload('/src/components/models/Dolphin.glb')
-useGLTF.preload('/src/components/models/Gamecube.glb')
+useGLTF.preload('/public/models/WindowsXP.glb')
+useGLTF.preload('/public/models/Keyboard.glb')
+useGLTF.preload('/public/models/Tux.glb')
+useGLTF.preload('/public/models/Pen.glb')
+useGLTF.preload('/public/models/CD.glb')
+useGLTF.preload('/public/models/Headphones.glb')
+useGLTF.preload('/public/models/Dolphin.glb')
+useGLTF.preload('/public/models/Gamecube.glb')
